@@ -1,3 +1,6 @@
+<%@ page import="java.util.List" %>
+<%@ page import="org.example.thuchanhjdbc1.Customer" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -5,9 +8,11 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+
+<%
+    List<Customer> customers = new ArrayList<>();
+    customers.add(new Customer("Huynh Tran Thanh Dung", "07/02/1994", "SGN"));
+    customers.add(new Customer("Le Dang Phap", "03/05/1998", "SGN"));
+%>
 </body>
 </html>
