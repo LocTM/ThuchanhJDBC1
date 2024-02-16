@@ -14,6 +14,7 @@
     List<Customer> customers = new ArrayList<>();
     customers.add(new Customer("Huynh Tran Thanh Dung", "07/02/1994", "SGN"));
     customers.add(new Customer("Le Dang Phap", "03/05/1998", "SGN"));
+    customers.add(new Customer("Nguyen Van Anh", "07/05/1994", "DAD"));
 
     request.setAttribute("khachhang",customers);
 
@@ -33,11 +34,7 @@
             <td>${kh.address}</td>
         </tr>
     </c:forEach>
-    <tr>
-        <td><%= customers.get(0).getName()%></td>
-        <td><%= customers.get(0).getDateOfBirth()%></td>
-        <td><%= customers.get(0).getAddress()%></td>
-    </tr>
+
 
 </table>
 </body>

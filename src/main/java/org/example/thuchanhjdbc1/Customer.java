@@ -5,6 +5,8 @@ public class Customer {
     private String dateOfBirth;
     private String address;
 
+    public String img;
+
     public Customer() {
     }
 
@@ -12,6 +14,13 @@ public class Customer {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.address = address;
+    }
+
+    public Customer(String name, String dateOfBirth, String address, String img) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+        this.img = img;
     }
 
     public String getName() {
@@ -36,5 +45,13 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
