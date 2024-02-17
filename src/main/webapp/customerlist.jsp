@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>DANH SACH KHACH HANG</h1>
-<table>
+<table border="1px">
     <tr>
         <td>Ten</td>
         <td>Ngay sinh</td>
