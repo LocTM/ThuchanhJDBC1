@@ -1,4 +1,4 @@
-package org.example.thuchanhjdbc1;
+package org.example.thuchanhjdbc1.model;
 
 public class Customer {
     private String name;
