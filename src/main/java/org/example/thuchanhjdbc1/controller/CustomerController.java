@@ -13,7 +13,7 @@ public class CustomerController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("customerList.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("customerlist.jsp");
         dispatcher.forward(req,resp);
     }
 }

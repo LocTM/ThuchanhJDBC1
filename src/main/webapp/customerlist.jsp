@@ -11,6 +11,25 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>DANH SACH KHACH HANG</h1>
+<table>
+    <tr>
+        <td>Ten</td>
+        <td>Ngay sinh</td>
+        <td>Dia chi</td>
+        <td>Anh</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 </body>
 </html>
