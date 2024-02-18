@@ -14,7 +14,7 @@ public class CustomerService {
         customerMap.put(1,new Customer("Le Dang Phap", "03/05/1998", "SGN"));
         customerMap.put(2,new Customer("Huynh Tran Thanh Dung", "21/05/1996", "HN"));
     }
-
+// tra ve danh sach
     public List<Customer> findAll(){
         return new ArrayList<>(customerMap.values());
     }
