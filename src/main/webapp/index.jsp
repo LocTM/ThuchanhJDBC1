@@ -12,7 +12,7 @@
 
 <%
     List<Customer> customers = new ArrayList<>();
-    customers.add(new Customer("Huynh Tran Thanh Dung", "07/02/1994", "SGN","https://cdnphoto.dantri.com.vn/9rwIWM9a2xlEBsnb63k091K8vnQ=/zoom/774_516/2024/02/16/nangnongsgtrinh-nguyen-edited-1708094255887.jpeg"));
+    customers.add(new Customer("Huynh Tran Thanh Dung", "07/02/1994", "SGN","https://anvientv.com.vn/uploads/upload/1664959678_anh-co-do-sao-vang.jpg"));
     customers.add(new Customer("Le Dang Phap", "03/05/1998", "SGN"));
     customers.add(new Customer("Nguyen Van Anh", "07/05/1994", "DAD"));
 

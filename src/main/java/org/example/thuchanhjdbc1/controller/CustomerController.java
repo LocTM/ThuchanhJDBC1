@@ -22,7 +22,8 @@ public class CustomerController extends HttpServlet {
     // lay du lieu
         CustomerService customerService = new CustomerService();
         List<Customer> c = customerService.findAll();
-
+        req.setAttribute("kh",c);
+    // gan du lieu cho view
         dispatcher.forward(req,resp);
     }
 }
