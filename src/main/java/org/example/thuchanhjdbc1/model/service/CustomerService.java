@@ -7,17 +7,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CustomerService {
+public class CustomerService implements ICustomerService {
     // Bieu dien logic nghiep vu
     private static Map<Integer, Customer> customerMap = new HashMap<>();
     static {
         customerMap.put(1,new Customer("Le Dang Phap", "03/05/1998", "SGN"));
         customerMap.put(2,new Customer("Huynh Tran Thanh Dung", "21/05/1996", "HN"));
     }
+
 // tra ve danh sach
     public List<Customer> findAll(){
         return new ArrayList<>(customerMap.values());
     }
+
 
     public void save(Customer customer){
         customerMap.put(customerMap.size()+1, customer);
