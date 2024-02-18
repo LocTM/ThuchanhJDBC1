@@ -19,13 +19,16 @@ public class CustomerController extends HttpServlet {
     String action =req.getParameter("action");
     switch (action){
         case "create":
+            showFormCreate(req, resp);
+            break;
+
         default:
-            showAllCustomer(req, resp);
+            showALlCustomer(req, resp);
     }
 
     }
 
-    private static void showAllCustomer(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private static void showALlCustomer(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // don request tu client
         // dieu huong sang file jsp
         RequestDispatcher dispatcher = req.getRequestDispatcher("customerlist.jsp");
