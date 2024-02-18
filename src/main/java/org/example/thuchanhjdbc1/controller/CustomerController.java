@@ -16,14 +16,24 @@ import java.util.List;
 public class CustomerController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    // don request tu client
-    // dieu huong sang file jsp
+    String action =req.getParameter("action");
+    switch (action){
+        case "create":
+        default:
+            showAllCustomer(req, resp);
+    }
+
+    }
+
+    private static void showAllCustomer(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // don request tu client
+        // dieu huong sang file jsp
         RequestDispatcher dispatcher = req.getRequestDispatcher("customerlist.jsp");
-    // lay du lieu
+        // lay du lieu
         CustomerService customerService = new CustomerService();
         List<Customer> c = customerService.findAll();
         req.setAttribute("kh",c);
-    // gan du lieu cho view
-        dispatcher.forward(req,resp);
+        // gan du lieu cho view
+        dispatcher.forward(req, resp);
     }
 }
