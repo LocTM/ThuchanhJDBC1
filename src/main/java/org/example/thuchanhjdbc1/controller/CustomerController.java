@@ -52,4 +52,23 @@ public class CustomerController extends HttpServlet {
 
         dispatcher.forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action =req.getParameter("action");
+        action = action==null?"":action;
+        switch (action) {
+            case "create":
+                createNewCustomer(req,resp);
+                break;
+        }
+    }
+
+    private void createNewCustomer(HttpServletRequest req, HttpServletResponse resp) {
+        String name = req.getParameter("name");
+        String dob = req.getParameter("dateOfBirth");
+        String add = req.getParameter("address");
+        Customer customer = new Customer(name, dob, add);
+
+    }
 }

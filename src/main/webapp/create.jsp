@@ -13,9 +13,9 @@
 <body>
 <h1>Day la form tao moi</h1>
 <form method="post">
-    <input name="name">
-    <input name="dateOfBirth">
-    <input name="address">
+    <input name="name" placeholder="name">
+    <input name="dateOfBirth" placeholder="dateOfBirth">
+    <input name="address" placeholder="address">
     <button>Create</button>
 </form>
 

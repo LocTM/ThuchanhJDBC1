@@ -18,4 +18,9 @@ public class CustomerService {
     public List<Customer> findAll(){
         return new ArrayList<>(customerMap.values());
     }
+
+    public void save(Customer customer){
+        customerMap.put(customerMap.size()+1, customer);
+
+    }
 }
