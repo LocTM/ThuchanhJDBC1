@@ -11,6 +11,13 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Day la form tao moi</h1>
+<form method="post">
+    <input name="name">
+    <input name="dateOfBirth">
+    <input name="address">
+    <button>Create</button>
+</form>
 
 </body>
 </html>
