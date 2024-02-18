@@ -28,6 +28,17 @@ public class CustomerController extends HttpServlet {
 
     }
 
+    private void showFormCreate(HttpServletRequest req, HttpServletResponse resp) {
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("create.jsp");
+        try {
+            requestDispatcher.forward(req,resp);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private static void showALlCustomer(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // don request tu client
         // dieu huong sang file jsp
@@ -35,8 +46,9 @@ public class CustomerController extends HttpServlet {
         // lay du lieu
         CustomerService customerService = new CustomerService();
         List<Customer> c = customerService.findAll();
-        req.setAttribute("kh",c);
         // gan du lieu cho view
+        req.setAttribute("kh",c);
+
         dispatcher.forward(req, resp);
     }
 }
