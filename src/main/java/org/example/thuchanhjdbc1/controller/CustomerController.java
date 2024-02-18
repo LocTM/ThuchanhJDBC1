@@ -2,6 +2,7 @@ package org.example.thuchanhjdbc1.controller;
 
 import org.example.thuchanhjdbc1.model.Customer;
 import org.example.thuchanhjdbc1.model.service.CustomerService;
+import org.example.thuchanhjdbc1.model.service.CustomerServiceJDBC;
 import org.example.thuchanhjdbc1.model.service.ICustomerService;
 
 import javax.servlet.RequestDispatcher;
@@ -15,9 +16,10 @@ import java.util.List;
 
 @WebServlet(name = "customerController", urlPatterns = "/customers")
 public class CustomerController extends HttpServlet {
-    static ICustomerService customerService = new CustomerService();
+    static CustomerServiceJDBC customerService = new CustomerServiceJDBC();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        customerService.getConnection();
     String action =req.getParameter("action");
     action = action==null?"":action;
     switch (action){
