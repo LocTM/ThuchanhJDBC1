@@ -24,7 +24,7 @@
         <tr>
             <td>${customer.name}</td>
             <td>${customer.dateOfBirth}</td>
-            <td>${customer.name}</td>
+            <td>${customer.address}</td>
             <td></td>
         </tr>
     </c:forEach>

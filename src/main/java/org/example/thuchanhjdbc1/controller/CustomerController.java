@@ -69,6 +69,12 @@ public class CustomerController extends HttpServlet {
         String dob = req.getParameter("dateOfBirth");
         String add = req.getParameter("address");
         Customer customer = new Customer(name, dob, add);
-
+        CustomerService c = new CustomerService();
+        c.save(customer);
+        try {
+            resp.sendRedirect("/customers");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
