@@ -41,7 +41,8 @@ public class CustomerServiceJDBC implements ICustomerService{
                 c.add(customer);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println(e);
+            return null;
         }
         return c;
     }
