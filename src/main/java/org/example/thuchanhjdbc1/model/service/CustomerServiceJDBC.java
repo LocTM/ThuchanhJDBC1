@@ -35,7 +35,7 @@ public class CustomerServiceJDBC implements ICustomerService{
             ResultSet resultSet = getAllQuery.executeQuery();
             while (resultSet.next()){
                 String name =resultSet.getString("name");
-                String dob  =resultSet.getString("dob");
+                String dob  =resultSet.getString(2);
                 String address = resultSet.getString("address");
                 Customer customer = new Customer(name,dob,address);
                 c.add(customer);
